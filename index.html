@@ -4,74 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#073676">
-  <meta name="description" content="英会話のための基本文法ハンドブック - スマートフォン向け試作版">
+  <meta name="description" content="英会話のための基本文法ハンドブック - スマートフォン版">
   <title>基本文法ハンドブック | スマホ版</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#cover" aria-label="基本文法ハンドブックの表紙へ">
-      <span aria-hidden="true">◫</span>
-      <span>基本文法ハンドブック</span>
+      <span aria-hidden="true">▤</span><span>基本文法ハンドブック</span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="sr-only">メニューを開く</span>
       <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </button>
-    <nav id="site-nav" class="site-nav" aria-label="教材メニュー">
-      <a href="#cover">表紙</a>
-      <a href="#passive">受け身</a>
-      <a href="#modals">助動詞</a>
+    <nav id="site-nav" class="site-nav" aria-label="ページメニュー">
+      <a href="#cover">表紙</a><a href="#contents">目次</a>
     </nav>
   </header>
 
   <main>
-    <section id="cover" class="lesson cover-section" aria-labelledby="cover-title">
+    <section id="cover" class="cover-section page-section" aria-labelledby="cover-title">
       <div class="intro">
-        <p class="eyebrow">SMARTPHONE EDITION · PROTOTYPE</p>
+        <p class="eyebrow">SMARTPHONE EDITION</p>
         <h1 id="cover-title">英会話のための<br>基本文法ハンドブック</h1>
-        <p>「知る」から「話せる」へ。<br>まずは3つの教材を、1テーマずつ大きく。</p>
-        <a class="primary-link" href="#passive">教材を見る <span aria-hidden="true">↓</span></a>
+        <p>「知る」から「話せる」へ。<br>全教材を、1テーマずつ大きく見られるスマートフォン版です。</p>
+        <a class="primary-link" href="#contents">目次を見る <span aria-hidden="true">↓</span></a>
       </div>
-      <button class="image-button cover-image" type="button" data-image="assets/cover-01.jpg" data-alt="英会話のための基本文法ハンドブック 表紙">
-        <img src="assets/cover-01.jpg" alt="英会話のための基本文法ハンドブック 表紙" width="1490" height="2105">
+      <button class="image-button cover-image" type="button" data-image="assets/cover.jpg" data-alt="英会話のための基本文法ハンドブック 表紙">
+        <img src="assets/cover.jpg" alt="英会話のための基本文法ハンドブック 表紙" width="1490" height="2105">
         <span class="zoom-label">タップして拡大</span>
       </button>
     </section>
 
-    <section id="passive" class="lesson" aria-labelledby="passive-title">
+    <section id="contents" class="contents-section page-section" aria-labelledby="contents-title">
       <div class="section-heading">
-        <p class="eyebrow">LESSON 01</p>
-        <h2 id="passive-title">受け身（受動態）</h2>
-        <p>元の教材から「受け身」だけを切り出しました。画像をタップすると細部まで大きく見られます。</p>
+        <p class="eyebrow">CONTENTS</p>
+        <h2 id="contents-title">目次</h2>
+        <p>学びたい項目をタップしてください。PDFの掲載順に並んでいます。</p>
       </div>
-      <button class="image-button material" type="button" data-image="assets/passive-05.jpg" data-alt="受け身（受動態）の作り方">
-        <img src="assets/passive-05.jpg" alt="受け身（受動態）の作り方" width="1650" height="1435" loading="lazy">
-        <span class="zoom-label">タップして拡大</span>
-      </button>
-      <a class="next-link" href="#modals">次へ：助動詞 <span aria-hidden="true">↓</span></a>
+      <ol id="contents-list" class="contents-list"></ol>
+      <div class="page-nav page-nav-single"><a href="#cover">前へ：表紙</a></div>
     </section>
 
-    <section id="modals" class="lesson" aria-labelledby="modals-title">
-      <div class="section-heading">
-        <p class="eyebrow">LESSON 02</p>
-        <h2 id="modals-title">助動詞</h2>
-        <p>can・could・will・would・should・must・may の意味、例文、文の作り方をまとめています。</p>
-      </div>
-      <button class="image-button material" type="button" data-image="assets/modals-05.jpg" data-alt="助動詞の使い方">
-        <img src="assets/modals-05.jpg" alt="助動詞の使い方" width="1650" height="1100" loading="lazy">
-        <span class="zoom-label">タップして拡大</span>
-      </button>
-      <a class="next-link" href="#cover">表紙に戻る <span aria-hidden="true">↑</span></a>
-    </section>
+    <div id="lessons"></div>
   </main>
 
-  <footer>© 2026 Sumire &amp; Ryan · Prototype</footer>
+  <footer>© 2026 Sumire &amp; Ryan</footer>
 
   <dialog class="lightbox" aria-label="教材画像の拡大表示">
     <button class="close-button" type="button" aria-label="拡大表示を閉じる">×</button>
     <div class="lightbox-scroll"><img src="" alt=""></div>
-    <p>ピンチ操作、または指でスクロールして確認できます</p>
+    <p>指で上下左右に動かして確認できます</p>
   </dialog>
   <script src="script.js"></script>
 </body>
